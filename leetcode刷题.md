@@ -1518,7 +1518,7 @@ public:
 
 这个题就是完全二叉树的性质，给一个二叉树，然后判断有几个节点，下图很能说明情况：
 
-<img src="https://s2.loli.net/2022/07/02/OPbd9LInaW2ql4s.png" alt="222.完全二叉树的节点个数" style="zoom: 67%; float: left;" />
+<img src="https://s2.loli.net/2022/07/02/OPbd9LInaW2ql4s.png" alt="222.完全二叉树的节点个数" style="zoom: 67%;   ;" />
 
 如果是满二叉树，直接就是$2^n-1$，如果不是满二叉树，那么就往下递归呗
 
@@ -4689,7 +4689,7 @@ int monotoneIncreasingDigits(int n) {
   >
   > 下图表现得最为直观：
   >
-  > <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20210814164606.png" alt="图片" style="zoom: 67%; float: left;" />
+  > <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20210814164606.png" alt="图片" style="zoom: 67%;   ;" />
 
   代码模板如下：
 
@@ -5193,7 +5193,7 @@ void back_tracing(vector<int>& nums, int start, vector<bool>& use_check){
 
      不加use_check数组的话，对于同一层元素，如果有重复我们就是不能用它，如下图：
 
-     <img src="https://s2.loli.net/2022/07/02/YFRVWpXcPklhd83.webp" alt="图片" style="zoom: 67%; float: left;" />
+     <img src="https://s2.loli.net/2022/07/02/YFRVWpXcPklhd83.webp" alt="图片" style="zoom: 67%;   ;" />
 
      对于同一树枝来说，第三层得自己[1 ,2]，第四层的[1, 2, 2]如果不加use_check数组，肯定得不到122这个数组,当if判断的时候就跳过了，但我们还要用到2，所以上述代码不合适。
 

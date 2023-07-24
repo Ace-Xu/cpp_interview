@@ -99,7 +99,7 @@
 
 对任意一个文件使用ls -l命令，如下图所示：
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20210608145838.png" alt="image-20210512102626440" style="float: left;" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20210608145838.png" alt="image-20210512102626440" style="  ;" />
 
 **任意取一行，如：drwxr-xr-x  2 root root 4096 2009-01-14 17:34 bin**
 
@@ -464,7 +464,7 @@ IO层面，就不一样。要记住，IO操作只有两个阶段：
 
 对于数据准备阶段，是阻塞和非阻塞的层面。对于数据从内核转移到用户空间，就是同步异步阶段。
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203221656865.png" alt="img" style="zoom: 80%; float: left;" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203221656865.png" alt="img" style="zoom: 80%;   ;" />
 
 阻塞和非阻塞的区别在于内核数据还没准备好时，用户进程在一阶段数据准备时是否会阻塞；
 
@@ -797,7 +797,7 @@ tee( )函数
 
 # accept()、connect()发生在三次握手的哪一步？
 
-<img src="C:\Users\ACER\AppData\Roaming\Typora\typora-user-images\image-20220228223118192.png" alt="image" style="zoom: 50%; float: left;" />
+<img src="C:\Users\ACER\AppData\Roaming\Typora\typora-user-images\image-20220228223118192.png" alt="image" style="zoom: 50%;   ;" />
 
 看上图就很明白了，刚准备发SYN同步报文时候，connect函数阻塞，然后服务端收到SYN同步报文的时候，调用accept()阻塞，服务器发送SYN+ACK给客户端，此时connect连接上就返回了，然后等服务器收到ACK报文时，accept也返回。
 
@@ -824,7 +824,7 @@ SYN队列存储了收到SYN包的连接(对应内核代码的结构体： struct
 
 # 调用close()在哪一步？
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202202282238507.png" alt="image" style="float: left; zoom: 50%;" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202202282238507.png" alt="image" style="  ; zoom: 50%;" />
 
 首先注意EOF这个东西。当客户端调用close主动断开时，会在FIN报文后面放入一个文件结束符EOF，会放在服务器端读缓存队列的最后，当接收到EOF时，服务器需要处理这种异常情况，表示以后不会有任何数据到达。因此服务器会返回一个ACK确认报文然后进入closed_wait状态
 
@@ -1190,7 +1190,7 @@ Linux每个进程都会有一个非负整数表示的唯一进程 ID，简称 pi
 
 就进程间的关系来说，session 由一个或多个进程组组成。我们可以通过下图来理解进程、进程组和 session 之间的关系：
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/952033-20200103182042686-2100862807.png" alt="img" style="float: left;" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/952033-20200103182042686-2100862807.png" alt="img" style="  ;" />
 
 
 

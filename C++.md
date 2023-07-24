@@ -26,7 +26,7 @@
 
 此外还有继承权限的问题，如下图：
 
-<img src="https://images2015.cnblogs.com/blog/1048430/201611/1048430-20161107095657280-1519112029.png" alt="img" style="float: left;" />
+<img src="https://images2015.cnblogs.com/blog/1048430/201611/1048430-20161107095657280-1519112029.png" alt="img" style="  ;" />
 
 **多态**
 
@@ -383,7 +383,7 @@ c++主要引入了类这种东西，要进行初始化必须考虑到相应的�
 
 动态初始化也叫运行时初始化。主要是指需要经过函数调用才能完成的初始化或者是类的初始化，一般来说是局部静态类对象的初始化和局部静态变量的初始化。
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20190424220313563.png" alt="在这里插入图片描述" style="zoom: 60%; float: left;" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20190424220313563.png" alt="在这里插入图片描述" style="zoom: 60%;   ;" />
 
 下面是我自己的实验的一段代码：
 
@@ -1066,7 +1066,7 @@ Brass &pb = dilly;
 
 > 用到的情形举例：比如你有个游戏，游戏里有个虚基类叫「怪物」，有纯虚函数 「攻击」。然后派生出了三个子类「狼」「蜘蛛」「蟒蛇」，都实现了自己不同的「攻击」函数，比如狼是咬人，蜘蛛是吐丝，蟒蛇把你缠起来～～。然后出现好多怪物的时候就可以定义一个 虚基类指针数组，把各种怪物的指针给它，然后迭代循环的时候直接 monster[i]->attack() 攻击玩家就行了，如下图：
 >
-> <img src="https://pic1.zhimg.com/80/27e97e90be9ac729167740ee5c66a8ea_720w.jpg?source=1940ef5c" alt="img" style="float: left;" />
+> <img src="https://pic1.zhimg.com/80/27e97e90be9ac729167740ee5c66a8ea_720w.jpg?source=1940ef5c" alt="img" style="  ;" />
 
 ### 虚函数工作原理
 
@@ -1074,7 +1074,7 @@ c++没有强制规定虚函数的实现方式。**编译器中主要用虚表指
 
 先直接上图，然后再看一下虚函数的执行过程：
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202201211638057.png" alt="img" style="float: left;" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202201211638057.png" alt="img" style="  ;" />
 
 当调用一个对象对应的函数时，通过对象内存中的vptr找到一个虚函数表（注意这虚函数表既不在堆上，也不再栈上）。虚函数表内部是一个函数指针数组，记录的是该类各个虚函数的首地址。然后调用对象所拥有的函数。
 
@@ -1082,19 +1082,19 @@ c++没有强制规定虚函数的实现方式。**编译器中主要用虚表指
 
 - 原始基类的虚函数表
 
-  <img src="https://images2015.cnblogs.com/blog/364303/201608/364303-20160815123956531-397793609.png" alt="img" style="float: left;" />
+  <img src="https://images2015.cnblogs.com/blog/364303/201608/364303-20160815123956531-397793609.png" alt="img" style="  ;" />
 
 - 单继承时的虚函数（**无重写基类虚函数**）
 
-  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/364303-20160815124419156-189096231.png" alt="img" style="float: left;" />
+  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/364303-20160815124419156-189096231.png" alt="img" style="  ;" />
 
 - 单继承时的虚函数（**重写基类虚函数**）
 
-  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/364303-20160815124615562-420906064.png" alt="img" style="float: left;" />
+  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/364303-20160815124615562-420906064.png" alt="img" style="  ;" />
 
 - 多重继承时的虚函数（Derived ::public Base1,public Base2）
 
-  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/364303-20160815125139921-1422683315.png" alt="img" style="float: left;" />
+  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/364303-20160815125139921-1422683315.png" alt="img" style="  ;" />
 
 这样就会有内存和执行速度方面的成本：
 
@@ -2232,11 +2232,11 @@ shared_ptr 可能的线程安全隐患大概有如下几种，一是引用计数
 
    如果使用new即自身构造函数来分配内存的话，就会对于上面两部分执行heap-allocation，即两次堆分配，如下图：
 
-   <img src="C:\Users\ACER\AppData\Roaming\Typora\typora-user-images\image-20220514103558156.png" alt="image" style="float: left;" />
+   <img src="C:\Users\ACER\AppData\Roaming\Typora\typora-user-images\image-20220514103558156.png" alt="image" style="  ;" />
 
    但是如果使用make_shared的话，只用执行一次heap_allocation，如下图：
 
-   <img src="C:\Users\ACER\AppData\Roaming\Typora\typora-user-images\image-20220514104204749.png" alt="image" style="float: left;" />
+   <img src="C:\Users\ACER\AppData\Roaming\Typora\typora-user-images\image-20220514104204749.png" alt="image" style="  ;" />
 
    **其次使用make_shared还是异常安全的**
 
@@ -3039,7 +3039,7 @@ int get_max(int& a){
 
 坏处是①静态链接的文件体积太大。②如果库函数更新的话需要重新链接。③在内存中会存在多分拷贝，因为每个程序都会存在一份库函数，如下图：
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203201437522.png" alt="img" style="float: left;" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203201437522.png" alt="img" style="  ;" />
 
 静态库的生成使用如下命令：
 
@@ -3055,7 +3055,7 @@ ar -crv libadd.a add.o
 
 我们把静态链接与动态链接做一个这样子的比喻：把链接过程看做我们平时学习时做笔记的过程。我们平时学习时准备一本笔记本专门记录我们的学习笔记，比如在某本书的某一页上看到一个很好很有用的知识，这时候我们有两种方法记录在我们的笔记本上。一种是直接把那一页的内容全部抄写一遍到笔记本上（静态链接）；另一种是我们在笔记本上做个简单的记录（动态链接），比如写上：xxx知识点在《xxx》的xxx页。从这两种方法中我们可以很清楚地知道两种方式的特点。第一种方式的优点就是我们在复习的时候就很方便，不用翻阅其它书籍了，但是缺点也很明显，就是占用笔记本的空间很多，这种方法很快就把我们的笔记本给写满了。第二种方式的优点就是很省空间，缺点就是每当我们复习的时候，手头上必须备着相关的参考书籍，比如我们去教室复习的时候，就得背着一大摞书去复习，这样我们复习的效率可能就没有那么高了。
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203201443321.jpeg" alt="img" style="float: left;" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203201443321.jpeg" alt="img" style="  ;" />
 
 
 
@@ -3955,7 +3955,7 @@ vector().swap(Vec); //清空Vec的内存；
 
 ### vector的插入复杂度
 
-<img src="https://img-blog.csdnimg.cn/20190804120900612.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpa2VfdGhhdA==,size_16,color_FFFFFF,t_70" alt="img" style="zoom: 50%; float: left;" />
+<img src="https://img-blog.csdnimg.cn/20190804120900612.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpa2VfdGhhdA==,size_16,color_FFFFFF,t_70" alt="img" style="zoom: 50%;   ;" />
 
 ### vector为什么是成倍增长而不是固定大小的一个容量呢？
 
@@ -3989,7 +3989,7 @@ vector是单向开口的连续线性空间，deque是一种双向开口的连续
 
 deque 容器存储数据的空间是由一段一段等长的连续空间构成，各段空间之间并不一定是连续的，可以位于在内存的不同区域。
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203101434582.gif" alt="deque容器的底层存储机制" style="float: left;" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203101434582.gif" alt="deque容器的底层存储机制" style="  ;" />
 
 采用一块所谓的map作为主控，这里的map实际上是一块大小连续的空间，其中每一个元素我们称之为节点node，都指向了另一段连续线性空间，成为缓冲区，缓冲期才是deque的真正存储空间主体。
 
