@@ -30,7 +30,7 @@
 
 ## TCP报文封装的过程
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20211214192824.png" alt="image-20211214192824056" style="zoom:67%;float:left" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20211214192824.png" alt="image-20211214192824056" style="zoom:67%; " />
 
 上图以发送为例来介绍这个过程：
 
@@ -46,7 +46,7 @@ UDP封装与TCP类似，但是UDP无需为应用层数据保存一个副本，�
 
 ## socket和TCP/IP协议族的关系
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20211214194212.png" alt="image-20211214194212219" style="zoom:67%;float:left" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20211214194212.png" alt="image-20211214194212219" style="zoom:67%; " />
 
 如上图可以清晰的看见socket的位置
 
@@ -102,7 +102,7 @@ IP协议是TCP/IP协议族的动力，为上层提供了无状态、无连接、
 
 ## TCP的半关闭状态
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20211219163852.png" alt="image-20211219163824622" style="zoom:80%;float:left" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20211219163852.png" alt="image-20211219163824622" style="zoom:80%; " />
 
 由于TCP链接是全双工的，因此允许两个方向上数据的传输状态被独立的关闭。即通信的一端可以发送结束报文给对方，告诉我已经完成了数据的发送，但是还是可以继续接收数据。
 

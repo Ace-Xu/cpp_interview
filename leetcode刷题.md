@@ -1,6 +1,6 @@
 
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20210805105705.jpeg" alt="preview" style="zoom:80%;float:left" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20210805105705.jpeg" alt="preview" style="zoom:80%; " />
 
 
 
@@ -303,7 +303,7 @@ bool hasCycle(ListNode *head) {
 >
 > 1. 判断有无环
 >
-> 2. <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203062007367.png" alt="fig1" style="zoom: 25%;float:left" />
+> 2. <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203062007367.png" alt="fig1" style="zoom: 25%; " />
 > 
 >    *a*+(n+1)b+nc=2(a+b)⟹*a*=c+(n−1)(b+c)
 > 
@@ -626,7 +626,7 @@ ListNode* oddEvenList(ListNode* head) {
 
 **反转链表精髓：**
 
-<img src="C:\Users\ACER\AppData\Roaming\Typora\typora-user-images\image-20220309215739641.png" alt="image" style="zoom: 15%;float:left" />
+<img src="C:\Users\ACER\AppData\Roaming\Typora\typora-user-images\image-20220309215739641.png" alt="image" style="zoom: 15%; " />
 
 
 
@@ -862,7 +862,7 @@ ListNode* deleteDuplicates(ListNode* head) {
 
 - 双指针递归的做法
 
-  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202202271639896.png" alt="image-20220227163934553" style="zoom: 80%; float:left" />
+  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202202271639896.png" alt="image-20220227163934553" style="zoom: 80%;  " />
 
   这也不失为一种思路
 
@@ -903,11 +903,11 @@ public:
 
   时间复杂度$O(n)$
 
-  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202202281707570.png" alt="image-20220228170737345" style="zoom:80%; float:left" />
+  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202202281707570.png" alt="image-20220228170737345" style="zoom:80%;  " />
 
-  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202202281708322.png" alt="image-20220228170847124" style="zoom:80%; float:left" />
+  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202202281708322.png" alt="image-20220228170847124" style="zoom:80%;  " />
 
-  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202202281710287.png" alt="image" style="zoom:80%; float:left" />
+  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202202281710287.png" alt="image" style="zoom:80%;  " />
 
   第三步就是拆分
 
@@ -3326,7 +3326,7 @@ int findLengthOfLCIS(vector<int>& nums) {
 
 - 这道题动态规划不太好想，如果画个图会好一点，因此我就随便在网上找一张图了。
 
-  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20210924115530.png" alt="7EFA9A32B19DA856AB78C8D29AD55875.png" style="zoom: 33%;float:left" />
+  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20210924115530.png" alt="7EFA9A32B19DA856AB78C8D29AD55875.png" style="zoom: 33%; " />
 
   这张图对于理解二维dp数组很有帮助
 
@@ -3691,7 +3691,7 @@ int maxUncrossedLines(vector<int>& nums1, vector<int>& nums2) {
 
   如下图一，很自然的，当T索引为0时候，对应的第0列就是当前字符在T中出现位置的下标，没有的标-1就行；
 
-  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20211012114139.jpg" alt="451f324be3121d731c1bd49ae62db5d" style="zoom: 15%;float:left" />
+  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20211012114139.jpg" alt="451f324be3121d731c1bd49ae62db5d" style="zoom: 15%; " />
 
   ```c
   /*ahbgdc这个T字符串构成的数组如下：重点在于从后往前构造会简单很多*/
@@ -3777,7 +3777,7 @@ int maxUncrossedLines(vector<int>& nums1, vector<int>& nums2) {
 
   **状态转移方程为啥是上述的？只有一个办法，就是画表。以后看到子序列问题的dp ，画表就完事儿了！！！！**
 
-  <img src="C:\Users\ACER\AppData\Roaming\Typora\typora-user-images\image-20220501220905568.png" alt="image-20220501220905568" style="zoom:33%;float:left" />
+  <img src="C:\Users\ACER\AppData\Roaming\Typora\typora-user-images\image-20220501220905568.png" alt="image-20220501220905568" style="zoom:33%; " />
 
   ```c++
   int numDistinct(string s, string t) {
@@ -5130,7 +5130,7 @@ bool jarge(string s){
 
 同样不能出现重复，因此for循环从start开始
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20210818130700.png" alt="图片" style="zoom: 67%;float:left" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20210818130700.png" alt="图片" style="zoom: 67%; " />
 
 ```c++
 vector<vector<int>> res;
@@ -5898,7 +5898,7 @@ void dfs(vector<vector<char>>& grid, int row, int col){
 
 重要思路：将水的流向反转，假设太平洋和大西洋的水 从低向高 “攀登”，分别能到达哪些位置，分别用 p_visited 和 a_visited 表示。两者的交集就代表能同时流向太平洋和大西洋的位置。
 
-<img src="https://cdn.jsdelivr.net/gh/guaguaupup/cloudimg/data/image-20220614224944482.png" alt="image-20220614224944482" style="zoom: 50%; float:left" />
+<img src="https://cdn.jsdelivr.net/gh/guaguaupup/cloudimg/data/image-20220614224944482.png" alt="image-20220614224944482" style="zoom: 50%;  " />
 
 ```c++
 vector<vector<int>> pacificAtlantic(vector<vector<int>>& heights) {
@@ -6262,7 +6262,7 @@ OK那么第一种情况，假如左边部分的最后一个叫做left_end是小�
 
 第二种情况就是大多数情况，即left_end的值是大于right_start的值的，这个时候我们怎么删除呢？当时做到这点的时候我一直有一个误区，就是以为要把左边部分+中间部分或者中间部分+右边部分全部删除，看谁删除的数量最小就可以了，为啥会用到二分法呢？后来仔细思考了一下不对的，不一定要把左边区间或右边区间全部删除！如下图：
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/image-20220423105700886.png" alt="image-20220423105700886" style="zoom:80%;float:left" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/image-20220423105700886.png" alt="image-20220423105700886" style="zoom:80%; " />
 
 依次查找左边部分的每一个元素在右边部分出现的位置，然后函数中间的这么多元素就可以了。因为这样就不用把左边的全部删除，因为把左边全部删除是错误的思路，左边的一部分可以和右边的有序元素拼接在一起
 
@@ -6479,9 +6479,9 @@ int findPeakElement(vector<int>& nums) {
 
   快慢指针解决掉它
 
-  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202202241511888.jpeg" alt="WechatIMG734.jpeg" style="zoom: 33%;float:left" />
+  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202202241511888.jpeg" alt="WechatIMG734.jpeg" style="zoom: 33%; " />
 
-  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202202241511346.jpeg" alt="WechatIMG735.jpeg" style="zoom:33%;float:left" />
+  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202202241511346.jpeg" alt="WechatIMG735.jpeg" style="zoom:33%; " />
 
   
 

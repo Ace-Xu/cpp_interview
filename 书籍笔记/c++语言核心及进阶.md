@@ -10,7 +10,7 @@
 3. 栈区，由编译器自动分配释放，存放函数形参，局部变量，返回值等。
 4. 堆区，由程序员分配和释放，若程序员不释放，程序结束时由操作系统CPU释放
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203081013393.png" alt="这里写图片描述" style="zoom:80%;float:left" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203081013393.png" alt="这里写图片描述" style="zoom:80%; " />
 
 > 代码区中存放的其实就是CPU执行的机器指令，代码区是共享和只读的，共享是指对于频繁被执行的程序，只需要在内存中有一份代码就行。而只读则表示防止程序意外修改指令。
 >

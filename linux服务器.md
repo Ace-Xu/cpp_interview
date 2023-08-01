@@ -336,7 +336,7 @@ int socket(int domain,int type,int protocol);
 
   顾名思义，一个主反应堆reactor，一个accepter或者handler来处理接收的事件。
 
-  <img src="https://cdn.jsdelivr.net/gh/xiaolincoder/ImageHost4@main/操作系统/Reactor/单Reactor单进程.png" alt="img" style="zoom:50%;float:left" />
+  <img src="https://cdn.jsdelivr.net/gh/xiaolincoder/ImageHost4@main/操作系统/Reactor/单Reactor单进程.png" alt="img" style="zoom:50%; " />
 
   **优点：**模型简单，没有多线程、进程通信、竞争的问题，全部都在一个线程中完成。
 
@@ -349,7 +349,7 @@ int socket(int domain,int type,int protocol);
 
   一个主反应堆reactor和一个线程池，线程池用来处理分发的事件
 
-  <img src="https://cdn.jsdelivr.net/gh/xiaolincoder/ImageHost4@main/操作系统/Reactor/单Reactor多线程.png" alt="img" style="zoom:46%;float:left" />
+  <img src="https://cdn.jsdelivr.net/gh/xiaolincoder/ImageHost4@main/操作系统/Reactor/单Reactor多线程.png" alt="img" style="zoom:46%; " />
 
   **优点：**可以充分利用多核 CPU 的处理能力。
 
@@ -359,7 +359,7 @@ int socket(int domain,int type,int protocol);
 
   就是游双书里面的半同步/半反应堆模型，给这个归到了代码逻辑层面。
 
-  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203290943547.png" style="zoom:45%;float:left" />
+  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203290943547.png" style="zoom:45%; " />
 
   主线程和子线程分工明确，主线程只负责接收新连接，子线程负责完成后续的业务处理。
 
@@ -378,7 +378,7 @@ int socket(int domain,int type,int protocol);
 
 preactor模型如下图所示：
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203290949372.png" alt="img" style="zoom:50%;float:left" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203290949372.png" alt="img" style="zoom:50%; " />
 
 工作流程如下：
 
@@ -488,7 +488,7 @@ IO层面，就不一样。要记住，IO操作只有两个阶段：
 
 # C++网络通信中send和receive的为什么会阻塞
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203221702388.png" alt="image-20210915102717398" style="zoom:67%;float:left" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203221702388.png" alt="image-20210915102717398" style="zoom:67%; " />
 
 使用tcp协议进行通讯的双方，都各自有一个发送缓冲区和一个接收缓冲区。而缓冲区是有大小的，因此发生阻塞的本质原因是缓冲区满了，别的字节流消息无法进入缓冲区。
 
@@ -633,7 +633,7 @@ IO多路复用是指内核一旦发现进程指定的一个或者多个IO条件�
 
 > epoll就是解耦了select的模型：
 >
-> <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203231333124.png" alt="img" style="zoom: 20%;float:left" />
+> <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203231333124.png" alt="img" style="zoom: 20%; " />
 
 > 设想一个场景：有100万用户同时与一个进程保持着TCP连接，而每一时刻只有几十个或几百个TCP连接是活跃的(接收TCP包)，也就是说在每一时刻进程只需要处理这100万连接中的一小部分连接。那么，如何才能高效的处理这种场景呢？进程是否在每次询问操作系统收集有事件发生的TCP连接时，把这100万个连接告诉操作系统，然后由操作系统找出其中有事件发生的几百个连接呢？实际上，在Linux2.4版本以前，那时的select或者poll事件驱动方式是这样做的.
 >
@@ -755,7 +755,7 @@ tee( )函数
 
 如果服务端要提供文件传输的功能，我们能想到的最简单的方式是：将磁盘上的文件读取出来，然后通过网络协议发送给客户端。传统 I/O 的工作方式是，数据读取和写入是从用户空间到内核空间的复制，而内核空间的数据是通过操作系统层面的 I/O 接口从磁盘读取或写入。其过程如下图所示：
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203231452388.webp" alt="img" style="zoom: 50%;Float:left" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203231452388.webp" alt="img" style="zoom: 50%; " />
 
 可以想想一下这个过程。服务器读从磁盘读取文件的时候，发生一次系统调用，产生用户态到内核态的转换，将磁盘文件拷贝到内核的内存中。然后将位于内核内存中的文件数据拷贝到用户的缓冲区中。用户应用缓冲区需要将这些数据发送到socket缓冲区中，进行一次用户态到内核态的转换，复制这些数据。此时这些数据在内核的socket的缓冲区中，在进行一次拷贝放到网卡上发送出去。
 
@@ -769,13 +769,13 @@ tee( )函数
 
 - mmap/write 方式
 
-  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203231457223.webp" alt="image" style="zoom:80%;float:left" />
+  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203231457223.webp" alt="image" style="zoom:80%; " />
 
   把数据读取到内核缓冲区后，应用程序进行写入操作时，直接把内核的`Read Buffer`的数据复制到`Socket Buffer`以便写入，这次内核之间的复制也是需要CPU的参与的。
 
 - sendfile 方式
 
-  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203231500195.webp" alt="image" style="zoom:80%;float:left" />
+  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203231500195.webp" alt="image" style="zoom:80%; " />
 
   可以看到使用sendfile后，没有用户空间的参与，一切操作都在内核中进行。但是还是需要1次拷贝
 
@@ -787,7 +787,7 @@ tee( )函数
 
 - splice 方式
 
-  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203231510067.png" style="zoom:80%; float:left" />
+  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203231510067.png" style="zoom:80%;  " />
 
   其实就是CPU 在内核空间的读缓冲区（read buffer）和网络缓冲区（socket buffer）之间建立管道（pipeline）直接把数据传过去了，不去要CPU复制了
 
@@ -1096,7 +1096,7 @@ Linux 2.6 版本之前，监听同一个 socket 的进程会挂在同一个等�
 
   这个写法为什么有错误？如图：
 
-  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203181035470.jpeg" alt="img" style="zoom:80%;float:left" />
+  <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203181035470.jpeg" alt="img" style="zoom:80%; " />
 
   ThreadA进入while循环后，准备进入唤醒队列，此时ThreadB进来横插一脚，把`ready`改成`true`然后提前唤醒，这个时候线程A还没有进入唤醒队列，因此A会丢失唤醒条件进而永久wait
 

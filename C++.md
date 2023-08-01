@@ -386,7 +386,7 @@ c++主要引入了类这种东西，要进行初始化必须考虑到相应的�
 <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20190424220313563.png" alt="在这里插入图片描述" style="zoom: 60%;   ;" />
 
 下面是我自己的实验的一段代码：
-
+s
 ```c++
 #include<stdio.h>
 static int a;
@@ -620,7 +620,7 @@ const PINT p2 = &i2;	//p可以更改，p指向的内容不能更改，相当于 
 
 
 
-## #define<>和#define“ ”的区别
+## #include<>和#include“ ”的区别
 
 **#include<>**
 
@@ -760,7 +760,7 @@ T(T&& a){
 
 move实际上它并不能移动任何东西，它唯一的功能是将一个左值强制转换为一个右值引用。如果是一些基本类型比如int和char[10]定长数组等类型，使用move的话仍然会发生拷贝（因为没有对应的移动构造函数）。所以，move对于含资源（堆内存或句柄）的对象来说更有意义。
 
-<img src="https://s2.loli.net/2022/08/16/XBnWOEMSLg7AdsU.jpg" alt="img" style="zoom: 67%;float:left" /><img src="https://s2.loli.net/2022/08/16/UgBS4WOh61dTDEq.jpg" alt="img" style="zoom: 67%;" />
+<img src="https://s2.loli.net/2022/08/16/XBnWOEMSLg7AdsU.jpg" alt="img" style="zoom: 67%; " /><img src="https://s2.loli.net/2022/08/16/UgBS4WOh61dTDEq.jpg" alt="img" style="zoom: 67%;" />
 
 **第四行代码：**
 
@@ -1042,7 +1042,7 @@ Test t2(1);//正确
 
 > 我碰到了一种必须使用友元的情况。如下图
 >
-> <img src="https://s2.loli.net/2022/08/16/7vWarITSkPYHOdK.png" alt="image-20220816221227150" style="zoom:50%;float:left" />
+> <img src="https://s2.loli.net/2022/08/16/7vWarITSkPYHOdK.png" alt="image-20220816221227150" style="zoom:50%; " />
 >
 > 上述代码由于使用了priority_queue，而且每个成员是一个结构体，所以需要重新定义std::less的比较方式，所以在结构体重重载了`<`号，这个时候重载运算符需要用到友元。因为std::less类中的比较运算符需要调用struct中的，因此需要把结构体中的设置为友元。
 
@@ -1648,7 +1648,7 @@ c++结构体中默认是public继承。
 
 ### 什么不能被继承？
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202201221602391.png" alt="在这里插入图片描述" style="zoom:80%;float:left" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202201221602391.png" alt="在这里插入图片描述" style="zoom:80%; " />
 
 **1、构造函数**
 
@@ -1886,7 +1886,7 @@ if(!result){
 
 说这个之前要说一下类对象的内存结构：
 
-<img src="https://img-blog.csdnimg.cn/20190405172522761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01PVV9JVA==,size_16,color_FFFFFF,t_70" alt="img" style="zoom:80%;float:left" />
+<img src="https://img-blog.csdnimg.cn/20190405172522761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01PVV9JVA==,size_16,color_FFFFFF,t_70" alt="img" style="zoom:80%; " />
 
 **向上类型转换：**upcast，把派生类的指针或引用转换成基类的指针或者引用是安全的（或者说基类指针指向派生类）；因为用转换后的指针只能访问基类部分的函数时候，都可以访问，肯定安全。这个是隐式转换，c++认为是安全的。
 
@@ -2807,7 +2807,7 @@ public:
 
 事实上，(“abc”,“hello”) 这样的 Key、Value 数据并不会直接存储在 Hash 表的数组中，因为数组要求存储固定数据类型，主要目的是每个数组元素中要存放固定长度的数据。所以，数组中存储的是 Key、Value 数据元素的地址指针。一旦发生 Hash 冲突，只需要将相同下标，不同 Key 的数据元素添加到这个链表就可以了。查找的时候再遍历这个链表，匹配正确的 Key。
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203071623899.png" alt="阿里架构师数据结构原理：Hash表的时间复杂度为什么是O(1)？" style="zoom:80%;float:left" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203071623899.png" alt="阿里架构师数据结构原理：Hash表的时间复杂度为什么是O(1)？" style="zoom:80%; " />
 
 
 
@@ -3136,7 +3136,7 @@ int main(int argc, char *argv[])
 
 输出如下：
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203301037301.png" alt="图片" style="zoom:50%;float:left" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/202203301037301.png" alt="图片" style="zoom:50%; " />
 
 我们知道先入栈的占高地址，从结果看出入栈的顺序依次为`z->y->x`，即压栈顺序从右至左。
 
@@ -3416,7 +3416,7 @@ class B2:public virtual A;
 
 class D:public B1,public B2;
 
-<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20210104152509818.png" alt="img" style="zoom:80%;float:left" />
+<img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20210104152509818.png" alt="img" style="zoom:80%; " />
 
 上述就是菱形继承会产生两个问题。首先是空间问题，不节省空间。类B中有类A的数据，类C中也有。其次是二义性，歧义问题。当类D调用类A中的数据时候，到底是走类B的还是走类D的？如下：
 
@@ -3429,7 +3429,7 @@ void seta(int a){ C::m_a = a; }	// C类中的m_a
 
 > C++标准库中的 iostream 类就是一个虚继承的实际应用案例。iostream 从 istream 和 ostream 直接继承而来，而 istream 和 ostream 又都继承自一个共同的名为 base_ios 的类，是典型的菱形继承。此时 istream 和 ostream 必须采用虚继承，否则将导致 iostream 类中保留两份 base_ios 类的成员。
 >
-> <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20210104152649800.png" alt="img" style="zoom:80%;float:left" />
+> <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20210104152649800.png" alt="img" style="zoom:80%; " />
 
 **引入虚继承和直接继承会有什么区别呢**
 
