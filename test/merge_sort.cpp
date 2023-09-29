@@ -90,11 +90,11 @@ void back_traverse3(/*const*/ BNode& root) {
     }
 }
 
-void back_traverse_recurrence(BNode& root){
+void back_traverse_recurrence(BNode* root){
     if(!root) { return ; }
     std::stack<BNode*> st;
     std::unordered_set<BNode*> res;
-    BNode* cur = &root;
+    BNode* cur = root;
     while(cur || !st.empty()) {
         while(cur) {
             st.push(cur);
@@ -109,6 +109,31 @@ void back_traverse_recurrence(BNode& root){
                 cur = cur->rchild;
             }else {
                 std::cout<<"value = " <<cur->value << "\n";
+                cur = nullptr;
+            }
+        }
+    }
+}
+
+void btr(BNode* root) {
+    if(!root){return;}
+    std::stack<BNode*>st;
+    std::unordered_set<BNode*>res;
+    BNode* cur = root;
+    while(cur || !st.empty()) {
+        while(cur) {
+            st.push(cur);
+            cur = cur->lchild;
+        }
+        if(!st.empty()) {
+            cur = st.top();
+            st.pop();
+            if(res.find(cur) == res.end()) {
+                st.push(cur);
+                res.insert(cur);    //记录遍历过rchild的节点
+                cur = cur->rchild;
+            }else {
+                std::cout<<"value = " <<cur->value <<"\n";
                 cur = nullptr;
             }
         }
@@ -149,4 +174,22 @@ void pre_traverse_recurrence(BNode* root) {     //根 左  右
         }
     }
 }
+
+int get_pivot(std::vector<int>& arr, int left, int right) {
+    int pivot = arr[left];
+    while(left<right) {
+        while(left<right && arr[right]>=pivot) {
+            right--;
+        }
+        arr[left] = arr[right];
+        while(left<right && arr[right]>=pivot) {
+            left++;
+        }
+        arr[right] = arr[left];
+    }
+    arr[left] = pivot;
+    return left;
+}
+
+
 
